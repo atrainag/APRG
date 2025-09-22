@@ -1,0 +1,9 @@
+target: testfire.net
+modules:
+  - whois
+  - theharvester
+  - nmap
+output_dir: outputs
+concurrency: 3
+nmap:
+  args: "-sV -O -oX"
