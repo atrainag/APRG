@@ -1,0 +1,4 @@
+python-docx
+requests
+python-nmap
+PyYAML
