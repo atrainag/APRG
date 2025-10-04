@@ -1,23 +1,24 @@
 #!/usr/bin/env python3
 import argparse
 import os
-
 import yaml
-
 from parsers import nmap_parser
 from report.generate_docx import generate_report
 from tools import nmap_runner, theharvester_runner, whois_runner
 
 OUTPUT_DIR = "outputs"
 
+
 def load_config(path="config.yaml"):
     with open(path, "r") as f:
         return yaml.safe_load(f)
+
 
 def ensure_out(target):
     d = os.path.join(OUTPUT_DIR, target)
     os.makedirs(d, exist_ok=True)
     return d
+
 
 def main():
     ap = argparse.ArgumentParser()
